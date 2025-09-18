@@ -18,3 +18,85 @@ git branch -M main
 
 # push to GitHub
 git push -u origin main
+
+
+o actually commit and push your changes, do this step by step:
+
+# 1. Add all files in your folder to staging
+git add .
+
+# 2. Commit with a message
+git commit -m "hello"
+
+# 3. Push to GitHub
+git push -u origin main
+
+
+See the commit history
+git log
+
+This shows:Commit hash, Author, Date, Commit message
+
+#last commit done 
+git show --stat
+
+#git show : detailed changes in last commit
+git show
+
+#to show one line each of each commit
+git log --oneline
+
+#to initialize to user name and email
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+#to chack the setting or what is done till now
+git config --list
+Git shows all the configuration values that are currently active on your system.
+System level → applies to all users on the computer
+Global level → applies only to your user account (~/.gitconfig)
+Local level → applies only to the current repository (.git/config inside your project)
+
+#to show urls git is using now
+git remote -v
+rakshitagoyal@Rakshitas-MacBook-Air practise % git remote -v
+origin	git@github.com:Rakshita-Goyal/practise.git (fetch)
+origin	git@github.com:Rakshita-Goyal/practise.git (push)
+
+
+#git pull origin main
+git pull → fetch changes from a remote repo and merge them into your current branch.
+origin → the default name for your remote GitHub repository (you added this when you did git remote add origin ...).
+main → the branch you want to pull changes from (usually the default branch on GitHub).
+
+#git fetch origin main
+git fetch origin main
+
+Downloads the latest commits from the remote (origin/main)
+Does NOT merge them into your current branch
+Your local branch stays unchanged, but you now have the updated remote info
+
+rakshitagoyal@Rakshitas-MacBook-Air practise % git pull origin main
+bFrom github.com:Rakshita-Goyal/practise
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+rakshitagoyal@Rakshitas-MacBook-Air practise % git fetch origin main 
+
+From github.com:Rakshita-Goyal/practise
+ * branch            main       -> FETCH_HEAD
+
+
+#to show state of currect directories working in
+git status
+
+#to see what present in the file and directly come to the vscode
+code filename 
+
+#to see in the terminal only
+cat filename
+
+
+#Stages a file (prepares it for commit).
+Example:
+git add index.html
+git add [file]
